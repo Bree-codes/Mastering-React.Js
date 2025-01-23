@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import TaskList from './TaskList';
+import AddTask from './AddTask';
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [tasks, setTasks] = useState([]);
+    const [filter, setFilter] = useState("all");
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const addTask = (task) => {
+        setTasks([...tasks, { id: Date.now(), text: task, completed: false }]);
+    };
+
+    const toggleComplete = (id) => {
+        setTasks(tasks.map(task =>
+            task.id === id ? { ...task, completed: !task.completed } : task
+        ));
+    };
+
+    const deleteTask = (id) => {
+        setTasks(tasks.filter(task => task.id !== id));
+    };
+
+    const filteredTasks = tasks.filter(task =>
+        filter === "all" ? true : filter === "completed" ? task.completed : !task.completed
+    );
+
+    return (
+        <div className="app">
+            <h1>Task Tracker</h1>
+            <AddTask onAdd={addTask} />
+            <div className="filter">
+                <button onClick={() => setFilter("all")}>All</button>
+                <button onClick={() => setFilter("completed")}>Completed</button>
+                <button onClick={() => setFilter("pending")}>Pending</button>
+            </div>
+            <TaskList
+                tasks={filteredTasks}
+                onToggle={toggleComplete}
+                onDelete={deleteTask}
+            />
+        </div>
+    );
 }
 
-export default App
+export default App;
