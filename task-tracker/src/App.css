@@ -50,6 +50,12 @@ li span {
   cursor: pointer;
   flex-grow: 1;
   text-align: left;
+  color: #333; /* Set a visible text color */
+}
+
+li span.completed {
+  color: #6c757d; /* Optional: Dim the color for completed tasks */
+  text-decoration: line-through; /* Strike-through for completed tasks */
 }
 
 li span:hover {
@@ -71,14 +77,21 @@ button:hover {
 }
 
 form {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto; /* Center horizontally */
+  width: 100%;
+  max-width: 500px; /* Set a maximum width */
 }
 
 form input {
+  flex: 1; /* Allow the input to stretch */
   padding: 10px;
-  width: calc(100% - 100px);
   border: 1px solid #ddd;
   border-radius: 4px;
+  margin-right: 10px;
 }
 
 form button {
@@ -94,3 +107,4 @@ form button {
 form button:hover {
   background-color: #218838;
 }
+
