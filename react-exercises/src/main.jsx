@@ -1,7 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Bree from "./components/Bree.jsx";
+import Application from "./components/Application.jsx";
 
-createRoot(document.getElementById('root')).render(
-    <Bree />
-)
+
+createRoot(document.getElementById('root')).render(<Application/>)
