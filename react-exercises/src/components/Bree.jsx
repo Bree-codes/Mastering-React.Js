@@ -5,7 +5,6 @@ const Bree = () => {
     const [name, setName] = useState("bree");
     const [course, setCourse] = useState("cs");
 
-
     function handleName(e) {
         setName(e.target.value);
         console.log(e);
@@ -29,8 +28,10 @@ const Bree = () => {
                     <label htmlFor={"course"}>Course</label>
                     <input type={"course"} id={"course"} value={course} onChange={(e) =>handleCourse(e)}/>
                 </div>
-
             </form>
+            <p>
+                The student name is {name} and course is {course}
+            </p>
         </div>
     );
 };
