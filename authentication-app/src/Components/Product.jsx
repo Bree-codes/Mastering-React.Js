@@ -10,8 +10,11 @@ const Product = () => {
 
 
     useEffect(() => {
-        axios.get("https://fakestoreapi.com/products/"+productId)
+        axios.get("https://fakestoreapi.com/products/"+productId.productId)
+
             .then(response => {
+                console.log(response);
+
                 setResponse(response.data);
             })
             .catch(error=>{
@@ -21,13 +24,13 @@ const Product = () => {
 
     return (
         <div>
-            {error ? <h1>{error}</h1>:
+            {error ? <h1>{error}</h1>: response !== "" ?
                 <div>
                     <Image src={response.image} alt={"Product image"} width={200} height={200} />
                     <span>{response.title}</span>
                     <span> ksh {response.price}</span>
                     <span>{response.description}</span>
-                </div>
+                </div>: <span>Product Not Found</span>
             }
         </div>
     );
