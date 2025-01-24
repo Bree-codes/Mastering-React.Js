@@ -1,4 +1,6 @@
 import {useState} from "react";
+import Info from "./Info.jsx";
+import Addition from "./Addition.jsx";
 
 const Bree = () => {
 
@@ -7,7 +9,6 @@ const Bree = () => {
 
     function handleName(e) {
         setName(e.target.value);
-        console.log(e);
     }
 
     function handleCourse(e) {
@@ -17,6 +18,9 @@ const Bree = () => {
 
     return (
         <div>
+
+            <Addition />
+
             <h2>Student Information</h2>
             <form>
                 <div>
@@ -29,9 +33,8 @@ const Bree = () => {
                     <input type={"course"} id={"course"} value={course} onChange={(e) =>handleCourse(e)}/>
                 </div>
             </form>
-            <p>
-                The student name is {name} and course is {course}.
-            </p>
+
+          <Info course={"Computer Science"} name={name}/>
         </div>
     );
 };
