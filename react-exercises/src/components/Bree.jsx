@@ -30,7 +30,7 @@ const Bree = () => {
                 </div>
             </form>
             <p>
-                The student name is {name} and course is {course}
+                The student name is {name} and course is {course}.
             </p>
         </div>
     );
