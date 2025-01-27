@@ -1,12 +1,10 @@
-import Logo from "../assets/logo.jpg"
 import {Link} from "react-router-dom";
+import "../Styles/Navbar.css"
 
 const Navbar = () => {
     return (
         <div className={"navbar"}>
-            <div className={"leftside"}>
-                <img src={Logo} alt={"pizzeria logo"}/>
-            </div>
+
 
             <div className={"rightside"}>
                 <Link to ="/"> Home </Link>
