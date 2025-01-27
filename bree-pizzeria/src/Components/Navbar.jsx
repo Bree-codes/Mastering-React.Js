@@ -1,4 +1,5 @@
 import Logo from "../assets/logo.jpg"
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -8,7 +9,10 @@ const Navbar = () => {
             </div>
 
             <div className={"rightside"}>
-
+                <Link to ="/"> Home </Link>
+                <Link to ="/menu"> Menu </Link>
+                <Link to ="/about"> About </Link>
+                <Link to ="/contact"> Contact </Link>
 
             </div>
 
