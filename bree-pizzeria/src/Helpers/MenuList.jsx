@@ -6,6 +6,7 @@ import BBQ from "../assets/bbq.jpg"
 import Veggie from "../assets/veggie.jpg"
 import Supreme from "../assets/supreme.jpg"
 
+
 export const MenuList = [
     {
         name: "Steve Fav Pizza",
@@ -46,6 +47,17 @@ export const MenuList = [
         name: "Veggie Pizza",
         image: Veggie,
         price: 1100,
+    },
+    {
+        name: "Veggies Pizza",
+        image: Veggie,
+        price: 1200,
+    },
+    {
+        name: "Veggetable Pizza",
+        image: Veggie,
+        price: 1150,
     }
+
 
 ]
