@@ -5,6 +5,7 @@ import Home from "./Pages/Home.jsx";
 import Footer from "./Components/Footer.jsx";
 import About from "./Pages/About.jsx";
 import Menu from "./Pages/Menu.jsx";
+import Contact from "./Pages/Contact.jsx";
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path="/" exact element={ <Home/> } />
                     <Route path="/menu" exact element={ <Menu/> } />
                     <Route path="/about" exact element={ <About/> } />
+                    <Route path="/contact" exact element={ <Contact/>} />
                 </Routes>
 
                 <Footer/>
