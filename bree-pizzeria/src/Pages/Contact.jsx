@@ -1,4 +1,5 @@
 import hawaiian from"../assets/hawaiian.jpg"
+import "../Styles/Contact.css"
 
 const Contact = () => {
     return (
