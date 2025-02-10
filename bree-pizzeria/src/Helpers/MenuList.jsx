@@ -57,7 +57,12 @@ export const MenuList = [
         name: "Veggetable Pizza",
         image: Veggie,
         price: 1150,
+    },
+        
+    { 
+        name: "Veg Pizza",
+        image: Veggie
     }
-
+    
 
 ]
