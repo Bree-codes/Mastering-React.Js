@@ -61,7 +61,8 @@ export const MenuList = [
         
     { 
         name: "Veg Pizza",
-        image: Veggie
+        image: Veggie,
+        price: 1250,
     }
     
 
