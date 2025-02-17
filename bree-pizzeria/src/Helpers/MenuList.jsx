@@ -64,6 +64,4 @@ export const MenuList = [
         image: Veggie,
         price: 1250,
     }
-    
-
 ]
