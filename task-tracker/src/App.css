@@ -1,4 +1,3 @@
-/* App.css */
 .app {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -50,7 +49,7 @@ li span {
   cursor: pointer;
   flex-grow: 1;
   text-align: left;
-  color: #333; /* Set a visible text color */
+  color: #333; 
 }
 
 li span.completed {
