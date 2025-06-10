@@ -2,18 +2,20 @@ import React from 'react';
 
 type FeedbackButtonProps = {
     label: string;
-    onClick: () => void; // function type with no parameters, no return
+    onClick: () => void;
+    className?: string;
 };
 
-function FeedbackButton({ label, onClick }: FeedbackButtonProps) {
+const FeedbackButton = ({ label, onClick, className = '' }: FeedbackButtonProps) => {
     return (
         <button
             onClick={onClick}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-xl transition"
+            className={`text-white font-bold py-2 px-4 rounded-xl transition duration-200 ${className}`}
         >
             {label}
         </button>
     );
-}
+};
 
 export default FeedbackButton;
+
