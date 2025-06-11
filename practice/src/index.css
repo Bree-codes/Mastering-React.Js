@@ -21,7 +21,15 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 13px;
+  font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
   transition-duration: 0.4s;
+  margin-right: 10px;
 }
+
+button:hover {
+  background-color: #0d358c;
+  color: white;
+}
+

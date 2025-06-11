@@ -1,8 +1,20 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const Counter = () => {
 
     const [count, setCount] = useState<number>(0);
+
+    useEffect(() => {
+
+        /* code to be run */
+        console.log(`The count is: ${count}`)
+
+        /* return function(cleans up) */
+        return () => {
+            /* cleanup function to clean up, side effects like subscriptions or timers */
+        }
+
+    }, [count]);
 
     return (
         <div>
