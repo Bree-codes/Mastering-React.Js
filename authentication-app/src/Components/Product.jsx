@@ -8,7 +8,6 @@ const Product = () => {
     const [response, setResponse] = useState("");
     const [error, setError] = useState("");
 
-
     useEffect(() => {
         axios.get("https://fakestoreapi.com/products/"+productId.productId)
 
