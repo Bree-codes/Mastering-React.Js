@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
-
 const Products = () => {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState("");
@@ -17,8 +16,7 @@ const Products = () => {
         });
     },[])
 
-
-    const handleNavigation =(id) =>{
+  const handleNavigation =(id) =>{
         navigate("/product/"+id);
     }
 
