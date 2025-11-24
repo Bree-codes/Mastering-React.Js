@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/logo.svg'
 
 const Navbar: React.FC = () => {
   const [dark, setDark] = useState<boolean>(() => {
@@ -9,6 +10,7 @@ const Navbar: React.FC = () => {
       return true
     }
   })
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const body = document.body
@@ -27,23 +29,28 @@ const Navbar: React.FC = () => {
   return (
     <nav className="nav container">
       <div className="nav-left">
-        <div className="brand">Bree's Pizzeria</div>
-        <div className="nav-links">
-          <NavLink to="/" className={linkClass} end>
+        <img src={logo} alt="Bree's logo" style={{ width: 46, height: 46, borderRadius: 8, marginRight: 12 }} />
+        <div>
+          <div className="brand">Bree's Pizzeria</div>
+        </div>
+      </div>
+
+      <div className="nav-right">
+        <div className={`nav-links ${open ? 'open' : ''}`}>
+          <NavLink to="/" className={linkClass} end onClick={() => setOpen(false)}>
             Home
           </NavLink>
-          <NavLink to="/about" className={linkClass}>
+          <NavLink to="/about" className={linkClass} onClick={() => setOpen(false)}>
             About
           </NavLink>
-          <NavLink to="/menu" className={linkClass}>
+          <NavLink to="/menu" className={linkClass} onClick={() => setOpen(false)}>
             Menu
           </NavLink>
-          <NavLink to="/contact" className={linkClass}>
+          <NavLink to="/contact" className={linkClass} onClick={() => setOpen(false)}>
             Contact Us
           </NavLink>
         </div>
-      </div>
-      <div className="nav-right">
+
         <label className="theme-toggle">
           <input
             aria-label="Toggle dark mode"
@@ -53,6 +60,15 @@ const Navbar: React.FC = () => {
           />
           <span>{dark ? 'Dark' : 'Light'}</span>
         </label>
+
+        <button
+          className="mobile-toggle"
+          onClick={() => setOpen((s) => !s)}
+          aria-expanded={open}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
       </div>
     </nav>
   )

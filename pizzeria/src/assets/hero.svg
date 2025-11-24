@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="600" fill="#FFF6EE"/>
+  <g transform="translate(120 60)">
+    <circle cx="460" cy="180" r="160" fill="#FFD6A5" stroke="#FF7A18" stroke-width="6"/>
+    <circle cx="460" cy="180" r="120" fill="#FFF6E8"/>
+    <circle cx="420" cy="170" r="8" fill="#FF7A18"/>
+    <circle cx="500" cy="200" r="10" fill="#FF7A18"/>
+    <circle cx="460" cy="140" r="6" fill="#FF7A18"/>
+    <path d="M260 440c80-60 200-80 320-70 120 10 210 54 320 70" stroke="#FFB199" stroke-width="24" stroke-linecap="round"/>
+    <text x="40" y="520" font-size="28" fill="#7a5a4f" font-family="Inter, sans-serif">Freshly baked, hand-tossed pies — Bree's Pizzeria</text>
+  </g>
+</svg>

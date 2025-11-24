@@ -1,13 +1,11 @@
 import React from 'react'
+const hero = '/src/assets/hero.svg'
 
 const Home: React.FC = () => {
   return (
     <section>
       <div className="hero">
-        <img
-          alt="Delicious pizza"
-          src="https://images.unsplash.com/photo-1548365328-9f6f0d6a1de6?auto=format&fit=crop&w=1400&q=60"
-        />
+        <img alt="Delicious pizza" src={hero} />
         <div className="hero-overlay container">
           <h1>Welcome to Bree's Pizzeria</h1>
           <p>
