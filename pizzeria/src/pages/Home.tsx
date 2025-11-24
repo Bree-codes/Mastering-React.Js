@@ -3,13 +3,19 @@ import React from 'react'
 const Home: React.FC = () => {
   return (
     <section>
-      <h1>Welcome to Bree's Pizzeria</h1>
-      <p>
-        Hand-tossed pies, fresh ingredients, and a warm atmosphere. Order online
-        or visit us in person.
-      </p>
       <div className="hero">
-        <img alt="pizza" src="https://images.unsplash.com/photo-1601924582970-1c2aeba8f3d1?auto=format&fit=crop&w=1200&q=60" />
+        <img
+          alt="Delicious pizza"
+          src="https://images.unsplash.com/photo-1548365328-9f6f0d6a1de6?auto=format&fit=crop&w=1400&q=60"
+        />
+        <div className="hero-overlay container">
+          <h1>Welcome to Bree's Pizzeria</h1>
+          <p>
+            Hand-tossed pies made from the freshest ingredients. Try our chef
+            specials and taste the love in every slice.
+          </p>
+          <a className="btn" href="/menu">View Menu</a>
+        </div>
       </div>
     </section>
   )
